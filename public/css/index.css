@@ -61,11 +61,12 @@ body.light-mode .glass-card {
 }
 
 .bg-glass-dark {
-    background: rgba(0,0,0,0.3);
+    background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(5px);
 }
+
 body.light-mode .bg-glass-dark {
-    background: rgba(255,255,255,0.4);
+    background: rgba(255, 255, 255, 0.4);
 }
 
 /* Neon & Glow Effects */
@@ -81,6 +82,7 @@ body.light-mode .text-glow {
     box-shadow: 0 0 15px rgba(13, 110, 253, 0.5);
     transition: all 0.3s ease;
 }
+
 .glow-btn:hover {
     box-shadow: 0 0 25px rgba(13, 110, 253, 0.8);
     transform: translateY(-2px);
@@ -103,6 +105,7 @@ body.light-mode .text-glow {
     position: relative;
     padding-left: 30px;
 }
+
 .timeline::before {
     content: '';
     position: absolute;
@@ -112,10 +115,12 @@ body.light-mode .text-glow {
     width: 2px;
     background: var(--primary);
 }
+
 .timeline-item {
     position: relative;
     margin-bottom: 1.5rem;
 }
+
 .timeline-item::before {
     content: '';
     position: absolute;
@@ -127,6 +132,7 @@ body.light-mode .text-glow {
     background: var(--primary);
     box-shadow: 0 0 10px var(--primary);
 }
+
 .timeline-item h5 {
     margin-top: 5px;
     font-weight: 600;
@@ -137,6 +143,7 @@ body.light-mode .text-glow {
     display: flex;
     align-items: center;
 }
+
 .theme-switch {
     display: inline-block;
     height: 34px;
@@ -144,9 +151,11 @@ body.light-mode .text-glow {
     width: 60px;
     margin-bottom: 0;
 }
+
 .theme-switch input {
     display: none;
 }
+
 .slider {
     background-color: #333;
     bottom: 0;
@@ -156,15 +165,17 @@ body.light-mode .text-glow {
     right: 0;
     top: 0;
     transition: .4s;
-    border: 1px solid rgba(255,255,255,0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 8px;
 }
+
 .slider.round {
     border-radius: 34px;
 }
+
 .slider:before {
     background-color: #fff;
     bottom: 4px;
@@ -176,27 +187,32 @@ body.light-mode .text-glow {
     width: 24px;
     border-radius: 50%;
     z-index: 2;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
-input:checked + .slider {
+
+input:checked+.slider {
     background-color: #1e293b;
 }
-input:checked + .slider:before {
+
+input:checked+.slider:before {
     transform: translateX(26px);
 }
+
 .sun-icon {
     color: #f39c12;
     font-size: 14px;
     z-index: 1;
 }
+
 .moon-icon {
     color: #f1c40f;
     font-size: 14px;
     z-index: 1;
 }
+
 body.light-mode .slider {
     background-color: #e2e8f0;
-    border-color: rgba(0,0,0,0.1);
+    border-color: rgba(0, 0, 0, 0.1);
 }
 
 /* Music Button */
@@ -208,14 +224,17 @@ body.light-mode .slider {
     justify-content: center;
     transition: all 0.3s ease;
 }
+
 body.light-mode .play-music-btn {
     color: var(--text-light);
     border-color: var(--text-light);
 }
+
 body.light-mode .play-music-btn:hover {
     background: var(--text-light);
     color: var(--light-bg);
 }
+
 .play-music-btn.playing {
     animation: pulse 2s infinite;
     background-color: var(--primary);
@@ -227,9 +246,11 @@ body.light-mode .play-music-btn:hover {
     0% {
         box-shadow: 0 0 0 0 rgba(13, 110, 253, 0.7);
     }
+
     70% {
         box-shadow: 0 0 0 10px rgba(13, 110, 253, 0);
     }
+
     100% {
         box-shadow: 0 0 0 0 rgba(13, 110, 253, 0);
     }
@@ -247,12 +268,25 @@ body.light-mode .play-music-btn:hover {
 }
 
 @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
 }
+
 @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: var(--primary) }
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: var(--primary)
+    }
 }
 
 /* Carousel Image Fix */
@@ -265,5 +299,44 @@ body.light-mode .play-music-btn:hover {
 @media (max-width: 768px) {
     #careerCarousel .carousel-item img {
         height: 300px;
+    }
+}
+
+
+/* WhatsApp Floating Button */
+.wa-float {
+    position: fixed;
+    width: 70px;
+    height: 70px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25D366;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 35px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 100;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wa-float:hover {
+    background-color: #fff;
+    color: #25D366;
+    box-shadow: 0 0 15px rgba(37, 211, 102, 0.5);
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .wa-float {
+        width: 60px;
+        height: 60px;
+        font-size: 30px;
+        bottom: 30px;
+        right: 30px;
     }
 }
