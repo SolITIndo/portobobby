@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bobby Pinaz Putra Pratama - Portfolio</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="public/bootstrap/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="public/css/index.css">
+    <link rel="shortcut icon" href="public/img/logo1.png" type="image/x-icon">
+</head>
+
+<body class="dark-mode">
+    <!-- Particles Background -->
+    <div id="tsparticles"></div>
+
+    <!-- Music Element -->
+    <audio id="bgMusic" loop>
+        <source src="public/assets/music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top backdrop-blur">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-glow" href="public/pdf/cv.pdf" target="_blank"
+                download="CV-Bobby Pinaz Putra Pratama.pdf">B<span class="text-primary">PPP</span></a>
+            <a href="public/pdf/cv.pdf" target="_blank" download="CV-Bobby Pinaz Putra Pratama.pdf"
+                class="navbar-brand fw-bold text-glow">CV</a>
+
+            <div class="d-flex align-items-center ms-auto gap-3">
+                <button class="btn btn-outline-light rounded-circle play-music-btn" id="musicToggle"
+                    title="Play/Pause Music">
+                    <i class="fas fa-music"></i>
+                </button>
+                <div class="theme-switch-wrapper">
+                    <label class="theme-switch" for="checkbox">
+                        <input type="checkbox" id="checkbox" checked />
+                        <div class="slider round">
+                            <i class="fas fa-sun sun-icon"></i>
+                            <i class="fas fa-moon moon-icon"></i>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero min-vh-100 d-flex align-items-center justify-content-center position-relative">
+        <div class="container text-center text-white z-index-1">
+            <div data-aos="zoom-in" data-aos-duration="1500" class="tilt-card p-5 glass-card mx-auto"
+                style="max-width: 800px;" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
+                <div class="profile-img-container mb-4 mx-auto">
+                    <div class="profile-img bg-primary text-white d-flex align-items-center justify-content-center display-1 fw-bold rounded-circle mx-auto border border-4 border-primary glow-border"
+                        style="width: 150px; height: 150px;">
+                        <img src="public/img/foto.jpeg" alt="Bobby"
+                            style="width: 100%; height: 100%; object-fit: cover; object-position: center; border-radius: 50%;">
+                    </div>
+                </div>
+                <h1 class="display-4 fw-bold mb-3 text-glow">Bobby Pinaz Putra Pratama</h1>
+                <h3 class="text-primary mb-4 text-typewriter">Fullstack Web Developer</h3>
+                <p class="lead mb-4">Membangun solusi web inovatif dengan Laravel dan Bootstrap.</p>
+                <a href="#about" class="btn btn-primary btn-lg rounded-pill px-5 py-3 glow-btn">Explore My Work <i
+                        class="fas fa-arrow-down ms-2"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-glass-dark">
+        <div class="container py-5">
+            <h2 class="text-center mb-5 fw-bold text-glow" data-aos="fade-up">Tentang Saya</h2>
+            <div class="row g-4">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="glass-card p-4 h-100 tilt-card" data-tilt data-tilt-scale="1.05">
+                        <h4 class="mb-4 text-primary border-bottom border-primary pb-2"><i
+                                class="fas fa-user-circle me-2"></i> Info Personal</h4>
+                        <ul class="list-unstyled text-light lh-lg fs-5">
+                            <li><strong>Nama:</strong> Bobby Pinaz Putra Pratama</li>
+                            <li><strong>Umur:</strong> 29 Tahun</li>
+                            <li><strong>Lahir:</strong> 18 Mei 1997</li>
+                            <li><strong>Pendidikan:</strong> S1 - Ilmu Pemerintahan</li>
+                            <li><strong> Carrer : </strong> <br> <strong> 2020 - 2021 : </strong> IT Support PT King
+                                Jaya
+                                Panca Nusantara
+                                <br>
+                                <strong> 2021 -
+                                    2024 : </strong> IT Support PT Properti Perdana Indonesia <br> <strong>2024 -
+                                    2025 : </strong> Deputy
+                                Building
+                                Manager Apartemen City Park <br> <strong>2025 - 2026 : </strong> Fullstack Web
+                                Developer
+                                PT Properti
+                                Perdana Indonesia
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="glass-card p-4 h-100 tilt-card" data-tilt data-tilt-scale="1.05">
+                        <h4 class="mb-4 text-primary border-bottom border-primary pb-2"><i
+                                class="fas fa-graduation-cap me-2"></i> Riwayat Pendidikan</h4>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <span class="badge bg-primary">S1</span>
+                                <h5>Universitas Sultan Ageng Tirtayasa</h5>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="badge bg-secondary">SMA</span>
+                                <h5>SMAN 95 Jakarta</h5>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="badge bg-secondary">SMP</span>
+                                <h5>SMPN 248 Jakarta</h5>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="badge bg-secondary">SD</span>
+                                <h5>SDS Yadika 1 Tegal Alur</h5>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="badge bg-secondary">TK</span>
+                                <h5>TK Al-Ikhlas Tegal Alur</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5 position-relative">
+        <div class="container py-5 z-index-1">
+            <h2 class="text-center mb-5 fw-bold text-glow" data-aos="fade-up">Keahlian (Skills)</h2>
+            <div class="row g-4 justify-content-center">
+
+                <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="skill-card glass-card p-4 text-center h-100 tilt-card" data-tilt>
+                        <i class="fab fa-laravel text-danger display-3 mb-3 glow-icon"></i>
+                        <i class="fab fa-bootstrap text-purple display-3 mb-3 glow-icon ms-2"></i>
+                        <h5>Fullstack Laravel & Bootstrap</h5>
+                        <p class="text-muted">Pengembangan aplikasi web yang responsif dan kuat.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="skill-card glass-card p-4 text-center h-100 tilt-card" data-tilt>
+                        <i class="fas fa-server text-info display-3 mb-3 glow-icon"></i>
+                        <h5>Restful API</h5>
+                        <p class="text-muted">Desain dan implementasi API untuk komunikasi data yang efisien.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="skill-card glass-card p-4 text-center h-100 tilt-card" data-tilt>
+                        <i class="fab fa-github text-light display-3 mb-3 glow-icon"></i>
+                        <h5>GitHub</h5>
+                        <p class="text-muted">Version control dan kolaborasi tim profesional.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="skill-card glass-card p-4 text-center h-100 tilt-card" data-tilt>
+                        <i class="fas fa-credit-card text-success display-3 mb-3 glow-icon"></i>
+                        <h5>Payment Gateway</h5>
+                        <p class="text-muted">Integrasi sistem pembayaran online yang aman.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="skill-card glass-card p-4 text-center h-100 tilt-card" data-tilt>
+                        <i class="fas fa-database text-warning display-3 mb-3 glow-icon"></i>
+                        <h5>MySQL & PostgreSQL</h5>
+                        <p class="text-muted">Manajemen basis data relasional yang skalabel.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- carousel karir -->
+    <section id="career" class="py-5 bg-glass-dark position-relative">
+        <div class="container py-5 z-index-1">
+            <h2 class="text-center mb-5 fw-bold text-glow" data-aos="fade-up">Riwayat Karir</h2>
+            <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-lg-10">
+                    <div id="careerCarousel" class="carousel slide glass-card p-3 rounded" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#careerCarousel" data-bs-slide-to="0" class="active"
+                                aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#careerCarousel" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#careerCarousel" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#careerCarousel" data-bs-slide-to="3"
+                                aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#careerCarousel" data-bs-slide-to="4"
+                                aria-label="Slide 5"></button>
+                            <button type="button" data-bs-target="#careerCarousel" data-bs-slide-to="5"
+                                aria-label="Slide 6"></button>
+                            <button type="button" data-bs-target="#careerCarousel" data-bs-slide-to="6"
+                                aria-label="Slide 7"></button>
+
+                        </div>
+                        <div class="carousel-inner rounded">
+                            <div class="carousel-item active">
+                                <img src="public/img/fullstack1.jpeg" class="d-block w-100" alt="Career 1">
+                                <div class="carousel-caption d-none d-md-block glass-card p-2" style="bottom: 20px;">
+                                    <h5 class="fw-bold">IT Support (2020 - 2021)</h5>
+                                    <p class="mb-0">PT Properti Perdana Indonesia</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="public/img/DPRKP.jpeg" class="d-block w-100" alt="Career 2">
+                                <div class="carousel-caption d-none d-md-block glass-card p-2" style="bottom: 20px;">
+                                    <h5 class="fw-bold">Deputy Building Manager (2024 - 2025)</h5>
+                                    <p class="mb-0">Apartemen City Park</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="public/img/perumnas.jpeg" class="d-block w-100" alt="Career 2">
+                                <div class="carousel-caption d-none d-md-block glass-card p-2" style="bottom: 20px;">
+                                    <h5 class="fw-bold">Deputy Building Manager (2024 - 2025)</h5>
+                                    <p class="mb-0">Apartemen City Park</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="public/img/polsek.jpeg" class="d-block w-100" alt="Career 2">
+                                <div class="carousel-caption d-none d-md-block glass-card p-2" style="bottom: 20px;">
+                                    <h5 class="fw-bold">Deputy Building Manager (2024 - 2025)</h5>
+                                    <p class="mb-0">Apartemen City Park</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="public/img/supervisi pekerjaan.jpeg" class="d-block w-100" alt="Career 2">
+                                <div class="carousel-caption d-none d-md-block glass-card p-2" style="bottom: 20px;">
+                                    <h5 class="fw-bold">Deputy Building Manager (2024 - 2025)</h5>
+                                    <p class="mb-0">Apartemen City Park</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="public/img/fullstack2.jpeg" class="d-block w-100" alt="Career 3">
+                                <div class="carousel-caption d-none d-md-block glass-card p-2" style="bottom: 20px;">
+                                    <h5 class="fw-bold">Fullstack Web Developer (2025 - 2026)</h5>
+                                    <p class="mb-0">PT Properti Perdana Indonesia</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="public/img/Fullstack.jpeg" class="d-block w-100" alt="Career 3">
+                                <div class="carousel-caption d-none d-md-block glass-card p-2" style="bottom: 20px;">
+                                    <h5 class="fw-bold">Fullstack Web Developer (2025 - 2026)</h5>
+                                    <p class="mb-0">PT Properti Perdana Indonesia</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#careerCarousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#careerCarousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5 position-relative">
+        <div class="container py-5 z-index-1">
+            <h2 class="text-center mb-5 fw-bold text-glow" data-aos="fade-up">Contoh Project</h2>
+            <div class="row g-4 justify-content-center">
+
+                <!-- Project 1 -->
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+                    <a href="https://github.com/bobby/votel-plus" target="_blank" class="text-decoration-none">
+                        <div class="glass-card h-100 tilt-card overflow-hidden" data-tilt data-tilt-scale="1.02">
+                            <img src="https://placehold.co/600x400/1e293b/FFF?text=Votel+Plus" class="card-img-top"
+                                alt="Votel+">
+                            <div class="card-body p-4">
+                                <h4 class="card-title text-primary fw-bold mb-3">Votel+</h4>
+                                <p class="card-text text-light">Aplikasi Sistem Pemilihan berbasis suara digital acara
+                                    MUA/MUTA/RUA/RUTA PPPSRS dengan keamanan tinggi menggunakan teknologi blockchain.
+                                </p>
+                                <div class="mt-3">
+                                    <span class="badge bg-danger">Laravel</span>
+                                    <span class="badge bg-purple" style="background-color: #6610f2;">Bootstrap</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+                    <a href="https://properindonesia.com" target="_blank" class="text-decoration-none">
+                        <div class="glass-card h-100 tilt-card overflow-hidden" data-tilt data-tilt-scale="1.02">
+                            <img src="https://placehold.co/600x400/1e293b/FFF?text=Website+ProperIndonesia"
+                                class="card-img-top" alt="Project 2">
+                            <div class="card-body p-4">
+                                <h4 class="card-title text-primary fw-bold mb-3">Website PT Proper Indonesia</h4>
+                                <p class="card-text text-light"> Website PT Properti Perdana Indonesia menggunakan
+                                    wordpress dengan template Plugin Elementor Pro</p>
+                                <div class="mt-3">
+                                    <span class="badge bg-info text-dark">Wordpress</span>
+                                    <span class="badge bg-warning text-dark">MySQL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="300">
+                    <a href="#" target="_blank" class="text-decoration-none">
+                        <div class="glass-card h-100 tilt-card overflow-hidden" data-tilt data-tilt-scale="1.02">
+                            <img src="https://placehold.co/600x400/1e293b/FFF?text=Asetiq+PMS" class="card-img-top"
+                                alt="Project 3">
+                            <div class="card-body p-4">
+                                <h4 class="card-title text-primary fw-bold mb-3">Aplikasi E-Commerce Y</h4>
+                                <p class="card-text text-light">Deskripsi singkat mengenai project ketiga. Fokus pada
+                                    antarmuka yang responsif dan performa yang cepat.</p>
+                                <div class="mt-3">
+                                    <span class="badge bg-primary">Flutter Moblie</span>
+                                    <span class="badge bg-info">Go-Gin API</span>
+                                    <span class="badge bg-primary">PostgreSql</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="py-5 bg-glass-dark position-relative">
+        <div class="container py-5 z-index-1">
+            <h2 class="text-center mb-5 fw-bold text-glow" data-aos="fade-up">Sertifikat</h2>
+            <div class="row g-4 justify-content-center">
+
+                <!-- Certificate 1: Ijazah -->
+                <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="skill-card glass-card p-4 text-center h-100 tilt-card" data-tilt
+                        style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#certModal1">
+                        <i class="fas fa-graduation-cap text-primary display-4 mb-3 glow-icon"></i>
+                        <h5 class="mb-0 mt-3">Ijazah</h5>
+                    </div>
+                </div>
+
+                <!-- Certificate 2: Fullstack Laravel -->
+                <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="skill-card glass-card p-4 text-center h-100 tilt-card" data-tilt
+                        style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#certModal2">
+                        <i class="fab fa-laravel text-danger display-4 mb-3 glow-icon"></i>
+                        <h5 class="mb-0 mt-3">Fullstack Laravel</h5>
+                    </div>
+                </div>
+
+                <!-- Certificate 3: PostgreSQL -->
+                <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="skill-card glass-card p-4 text-center h-100 tilt-card" data-tilt
+                        style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#certModal3">
+                        <i class="fas fa-database text-info display-4 mb-3 glow-icon"></i>
+                        <h5 class="mb-0 mt-3">PostgreSQL & MySql</h5>
+                    </div>
+                </div>
+
+                <!-- Certificate 4: Bootstrap -->
+                <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="skill-card glass-card p-4 text-center h-100 tilt-card" data-tilt
+                        style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#certModal4">
+                        <i class="fab fa-bootstrap text-purple display-4 mb-3 glow-icon"></i>
+                        <h5 class="mb-0 mt-3">Bootstrap</h5>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificate Modals -->
+    <!-- Modal 1: Ijazah -->
+    <div class="modal fade" id="certModal1" tabindex="-1" aria-labelledby="certModal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content glass-card border-primary">
+                <div class="modal-header border-bottom-0">
+                    <h5 class="modal-title text-glow" id="certModal1Label">Ijazah</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center p-0">
+                    <img src="https://placehold.co/800x600/0d6efd/FFF?text=Ijazah" class="img-fluid rounded-bottom"
+                        alt="Ijazah" style="width: 100%;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: Fullstack Laravel -->
+    <div class="modal fade" id="certModal2" tabindex="-1" aria-labelledby="certModal2Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content glass-card border-danger">
+                <div class="modal-header border-bottom-0">
+                    <h5 class="modal-title text-glow text-danger" id="certModal2Label">Sertifikat Fullstack Laravel</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center p-0">
+                    <img src="https://placehold.co/800x600/dc3545/FFF?text=Fullstack+Laravel+Certificate"
+                        class="img-fluid rounded-bottom" alt="Fullstack Laravel Certificate" style="width: 100%;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3: PostgreSQL -->
+    <div class="modal fade" id="certModal3" tabindex="-1" aria-labelledby="certModal3Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content glass-card border-info">
+                <div class="modal-header border-bottom-0">
+                    <h5 class="modal-title text-glow text-info" id="certModal3Label">Sertifikat PostgreSQL</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center p-0">
+                    <img src="https://placehold.co/800x600/0dcaf0/FFF?text=PostgreSQL+Certificate"
+                        class="img-fluid rounded-bottom" alt="PostgreSQL Certificate" style="width: 100%;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4: Bootstrap -->
+    <div class="modal fade" id="certModal4" tabindex="-1" aria-labelledby="certModal4Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content glass-card" style="border-color: #6610f2;">
+                <div class="modal-header border-bottom-0">
+                    <h5 class="modal-title text-glow text-purple" id="certModal4Label">Sertifikat Bootstrap</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center p-0">
+                    <img src="https://placehold.co/800x600/6610f2/FFF?text=Bootstrap+Certificate"
+                        class="img-fluid rounded-bottom" alt="Bootstrap Certificate" style="width: 100%;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-4 text-center bg-dark text-white-50 border-top border-primary">
+        <div class="container">
+            <p class="mb-0">&copy; 2026 Bobby Pinaz Putra Pratama. All rights reserved.</p>
+            <div class="mt-2">
+                <i class="fas fa-code text-primary me-2"></i> Built with Laravel - Bootstrap
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="public/bootstrap/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- tsParticles -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-engine@2/tsparticles.engine.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-slim@2/tsparticles.slim.min.js"></script>
+
+    <!-- Vanilla Tilt for 3D effect -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Main Script -->
+    <script src="public/js/index.js"></script>
+</body>
+
+</html>
